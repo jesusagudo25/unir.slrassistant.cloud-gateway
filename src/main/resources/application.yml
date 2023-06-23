@@ -5,7 +5,7 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    hostname: gateway
+    hostname: ${HOSTNAME:gateway}
     
   client:
     registerWithEureka: true

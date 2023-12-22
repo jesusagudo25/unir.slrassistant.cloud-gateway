@@ -4,16 +4,11 @@ server:
 ## Configuracion clasica de Eureka
 eureka:
   instance:
-    preferIpAddress: false
+    preferIpAddress: true
     hostname: ${HOSTNAME:gateway}
-    non-secure-port-enabled: false
-    secure-port-enabled: true
-    non-secure-port: 80
-    secure-port: 443
-    
   client:
     service-url:
-      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA_URL:http://127.0.0.1:8761/eureka}
       
 
 ## Habilitamos el service discovery (haciendo uso de Eureka)
